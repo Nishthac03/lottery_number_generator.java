@@ -6,6 +6,7 @@ sort the numbers using arrays.sort method
 */
 
 import java.util.Random;
+import java.util.Arrays; /*Importing 'Arrays' library in order to use 'sort' method*/
 
 public class Main{
   public static void main (String args[]){
@@ -27,7 +28,14 @@ public class Main{
             break;
           }
         }
-      }
+      }      
+      while(isRepeated);
+      lottery[indexDrawn] = randomNumber;   /*makes sure the 6 numbers are non-repeating*/
+    }
+    Arrays.sort(lottery);
+    System.out.println("Lottery Result is: ");
+    for(int j=0; j<slots ;j++){
+      System.out.print(lottery[j] + " ");
     }
   }
 }
